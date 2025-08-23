@@ -2,69 +2,68 @@ export const navLinks = [
   {
     id: 1,
     name: 'Home',
-    href: '#home',
+    href: './',
   },
   {
     id: 2,
     name: 'About',
-    href: '#about',
+    href: './#about',
   },
   {
     id: 3,
     name: 'Work',
-    href: '#work',
+    href: './#work',
   },
   {
     id: 4,
     name: 'Contact',
-    href: '#contact',
+    href: './#contact',
   },
 ];
 
-export const clientReviews = [
+export const workBenefits = [
   {
     id: 1,
-    name: 'Emily Johnson',
-    position: 'Marketing Director at GreenLeaf',
-    img: 'assets/review1.png',
-    review:
-      'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+    title: 'More than a website',
+    desc:'You get a business tool designed to generate opportunities.',
   },
   {
     id: 2,
-    name: 'Mark Rogers',
-    position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
-    review:
-      'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
+    title: 'Design that sells',
+    desc:'Attractive, brand-consistent interfaces that build trust and professionalism.',
   },
   {
     id: 3,
-    name: 'John Dohsas',
-    position: 'Project Manager at UrbanTech ',
-    img: 'assets/review3.png',
-    review:
-      'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+    title: 'Performance optimization',
+    desc:'Fast loading, smooth navigation, and full device compatibility.',
   },
   {
     id: 4,
-    name: 'Ether Smith',
-    position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
-    review:
-      'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+    title: 'Improve visibility',
+    desc:'SEO implemented from the ground up so Google finds you before the competition.',
+  },
+  {
+    id: 5,
+    title: 'Combined expertise',
+    desc:'High-level web development backed by advertising knowledge ensures your message and visuals work together toward your goals.',
+  },
+  {
+    id: 6,
+    title: 'Ongoing support',
+    desc:'I don’t just deliver projects—I help them grow.',
   },
 ];
 
 export const myProjects = [
   {
-    title: 'Podcastr - AI Podcast Platform',
-    desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+    title: 'IFCI - Orchestras web platform',
+    desc: 'A web platform designed to centralize key information about children and youth orchestras across Ecuador. Developed for the Institute for the Promotion of Creativity and Innovation (IFCI) with the support of OEI, the project strengthens cultural networks and improves access to reliable data.',
     subdesc:
       'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-    texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo1.png',
+    href: 'https://creatividad.gob.ec/orquestas',
+    slug: 'ifci-orchestras-web-platform',
+    mockup: '/assets/work/mockups/11-mockups-ifci.webp',
+    logo: '/assets/work/logos/ifci.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -74,34 +73,46 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'wordpress',
+        path: '/assets/work/tech/wp.png',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'Gsap',
+        path: '/assets/work/tech/gsap.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'Chart.js',
+        path: '/assets/work/tech/chartjs.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Javascript',
+        path: '/assets/work/tech/js.png',
+      },
+      {
+        id: 5,
+        name: 'PHP',
+        path: '/assets/work/tech/php.png',
+      },
+      {
+        id: 6,
+        name: 'Adobe illustrator',
+        path: '/assets/work/tech/ai.png',
       },
     ],
   },
   {
-    title: 'LiveDoc - Real-Time Google Docs Clone',
-    desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+    title: 'Pto99 - Agency web portfolio',
+    desc: 'A modern and responsive portfolio website developed for the advertising agency Pto99, created to showcase its projects with a fresh design aligned to its target audience. The interface highlights creativity while keeping navigation simple and engaging.',
     subdesc:
       'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+    href: 'https://pto99.com',
+    slug: 'pto99-agency-portfolio',
+    mockup: '/assets/work/mockups/11-mockups-pto.webp',
     texture: '/textures/project/project2.mp4',
-    logo: '/assets/project-logo2.png',
+    logo: '/assets/work/logos/pto.png',
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
@@ -111,34 +122,40 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'wordpress',
+        path: '/assets/work/tech/wp.png',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'Gsap',
+        path: '/assets/work/tech/gsap.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'Javascript',
+        path: '/assets/work/tech/js.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'PHP',
+        path: '/assets/work/tech/php.png',
+      },
+      {
+        id: 5,
+        name: 'Adobe illustrator',
+        path: '/assets/work/tech/ai.png',
       },
     ],
   },
   {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+    title: 'Score bb - Neonatal Health web app',
+    desc: 'A specialized application designed for healthcare professionals in Ecuador, Score Bebé estimates neonatal health risks to support timely interventions. Built for PUCE with the participation of child health specialists, it provides doctors with a practical tool in settings without neonatal ICUs.',
     subdesc:
       'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-    texture: '/textures/project/project3.mp4',
-    logo: '/assets/project-logo3.png',
+    href: 'https://scorebebe.com',
+    slug: 'score-bb-neonatal-health-web-app',
+    mockup: '/assets/work/mockups/11-mockups-scorebb.webp',
+    logo: '/assets/work/logos/score.png',
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:
@@ -151,33 +168,39 @@ export const myProjects = [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: '/assets/work/tech/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/work/tech/tailwindcss.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'Reakt hook form',
+        path: '/assets/work/tech/rhf.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'React pdf',
+        path: '/assets/work/tech/rpdf.png',
+      },
+      {
+        id: 5,
+        name: 'Adobe illustrator',
+        path: '/assets/work/tech/ai.png',
       },
     ],
   },
   {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+    title: 'Paso a paso - Baby healthcare documentary site',
+    desc: 'A documentary-style website aimed at guiding families in the care and upbringing of their children from birth through the first five years of life. It offers accessible resources and information, combining educational value with a friendly user experience.',
     subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
+      '',
+    href: 'https://paso-a-paso-2024.vercel.app',
+    slug: 'paso-a-paso-baby-healthcare-documentary-site',
+    mockup: '/assets/work/mockups/11-mockups-paso.webp',
+    logo: '/assets/work/logos/paso.png',
     logoStyle: {
       backgroundColor: '#0E1F38',
       border: '0.2px solid #0E2D58',
@@ -187,34 +210,73 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'Next.js',
+        path: '/assets/work/tech/nextjs.png',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/work/tech/tailwindcss.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'Nextra',
+        path: '/assets/work/tech/nextra.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Adobe illustrator',
+        path: '/assets/work/tech/ai.png',
       },
     ],
   },
   {
-    title: 'Imaginify - AI Photo Manipulation App',
-    desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
+    title: 'Galapagos Life Fund - Multilingual website',
+    desc: 'A multilingual website developed for the Galapagos Life Foundation, designed to raise awareness and facilitate participation in conservation and preservation initiatives in the Galápagos Islands. The platform serves both as an institutional showcase and as a tool for project applications.',
     subdesc:
-      'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-    href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    texture: '/textures/project/project5.mp4',
-    logo: '/assets/project-logo5.png',
+      '',
+    href: 'https://galapagoslifefund.org.ec/',
+    slug: 'galapagos-life-fund-multilingual-website',
+    mockup: '/assets/work/mockups/11-mockups-gal.webp',
+    logo: '/assets/work/logos/gal.png',
+    logoStyle: {
+      backgroundColor: '#1C1A43',
+      border: '0.2px solid #252262',
+      boxShadow: '0px 0px 60px 0px #635BFF4D',
+    },
+    spotlight: '/assets/spotlight5.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Wordpress',
+        path: '/assets/work/tech/wp.png',
+      },
+      {
+        id: 2,
+        name: 'PHP',
+        path: '/assets/work/tech/php.png',
+      },
+      {
+        id: 3,
+        name: 'Javascript',
+        path: '/assets/work/tech/js.png',
+      },
+      {
+        id: 4,
+        name: 'Adobe illustrator',
+        path: '/assets/work/tech/ai.png',
+      },
+    ],
+  },
+  {
+    title: 'Score CIMS - Healthcare web app',
+    desc: 'A research-driven web application developed to predict mortality risk in hospitalized COVID-19 patients in Ecuador. Created in collaboration with two major hospitals, it analyzed more than 5,000 cases to identify clinical and demographic risk factors.',
+    subdesc:
+      '',
+    href: 'https://scorecims.com',
+    slug: 'score-cims-healthcare-web-app',
+    mockup: '/assets/work/mockups/11-mockups-cims.webp',
+    logo: '/assets/work/logos/cims.png',
     logoStyle: {
       backgroundColor: '#1C1A43',
       border: '0.2px solid #252262',
@@ -225,22 +287,103 @@ export const myProjects = [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: '/assets/work/tech/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/work/tech/tailwindcss.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'Reakt hook form',
+        path: '/assets/work/tech/rhf.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Adobe illustrator',
+        path: '/assets/work/tech/ai.png',
+      },
+    ],
+  },
+  {
+    title: 'Urban Threads - E-commerce web app',
+    desc: 'An e-commerce platform built with Next.js as a hands-on project to strengthen expertise in advanced web development. The store covers the complete purchasing flow, from product browsing and cart management to checkout, with a dedicated admin panel for product management.',
+    subdesc:
+      '',
+    href: 'https://urban-threads-shop.vercel.app/',
+    slug: 'urban-threads-ecommerce-web-app',
+    mockup: '/assets/work/mockups/11-mockups-urban.webp',
+    logo: '/assets/work/logos/urban.png',
+    logoStyle: {
+      backgroundColor: '#1C1A43',
+      border: '0.2px solid #252262',
+      boxShadow: '0px 0px 60px 0px #635BFF4D',
+    },
+    spotlight: '/assets/spotlight5.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Next.js',
+        path: '/assets/work/tech/nextjs.png',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: '/assets/work/tech/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'Postgre SQL',
+        path: '/assets/work/tech/psql.png',
+      },
+      {
+        id: 4,
+        name: 'Cloudinary',
+        path: '/assets/work/tech/cloudinary.png',
+      },
+      {
+        id: 5,
+        name: 'Docker',
+        path: '/assets/work/tech/docker.png',
+      },
+    ],
+  },
+  {
+    title: 'Music Lab - Music school website',
+    desc: 'A professional website designed for Music Lab Ecuador, a music academy connected to Berklee City Music. The platform serves as the main communication channel for students and families, showcasing course schedules, program benefits, and application details, while reflecting the academy’s modern and creative identity.',
+    subdesc:
+      '',
+    href: 'https://musiclab.com.ec',
+    slug: 'music-lab-music-school-website',
+    mockup: '/assets/work/mockups/11-mockups-music.webp',
+    logo: '/assets/work/logos/music.png',
+    logoStyle: {
+      backgroundColor: '#1C1A43',
+      border: '0.2px solid #252262',
+      boxShadow: '0px 0px 60px 0px #635BFF4D',
+    },
+    spotlight: '/assets/spotlight5.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Wordpress',
+        path: '/assets/work/tech/wp.png',
+      },
+      {
+        id: 2,
+        name: 'PHP',
+        path: '/assets/work/tech/php.png',
+      },
+      {
+        id: 3,
+        name: 'HTML',
+        path: '/assets/work/tech/html.png',
+      },
+      {
+        id: 4,
+        name: 'CSS',
+        path: '/assets/work/tech/css.png',
       },
     ],
   },

@@ -109,7 +109,7 @@ body {
 }
 
 .grid-subtext {
-  @apply text-[#afb0b6] text-base;
+  @apply text-[#afb0b6] text-base text-pretty;
 }
 
 .copy-container {
@@ -122,12 +122,12 @@ body {
 }
 
 .tech-logo {
-  @apply w-10 h-10 rounded-md p-2 bg-neutral-100 backdrop-filter backdrop-blur-lg flex justify-center items-center;
+  @apply w-10 h-10 rounded-md p-2 bg-neutral-100/10 backdrop-filter backdrop-blur-lg flex justify-center items-center;
 }
 
 /* clients section */
 .client-container {
-  @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
+  @apply grid md:grid-cols-3 grid-cols-1 gap-5 mt-12;
 }
 
 .client-review {
@@ -188,5 +188,57 @@ body {
 .social-icon {
   @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
 }
+.path-container{
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 1));
+
+}
 
 
+.path-profile{
+  clip-path: path('M 40,0 L 315,0 A 30,30 0,0,1 342,27 L 342,40 A 23,23 0,0,0 368,52 A 30,30 0,0,1 400,78 L 400,372 A 65,65 0,0,1 340,420 L 101,420 A 45,45 0,0,1 60,373 L 60,280 A 25,25 0,0,0 40,255 L 28,255 A 25,25 0,0,1 0,230 L 0,40 A 40,40 0,0,1 40,0 Z');
+}
+
+
+.social-path{
+  clip-path: inset(0.5px round 0 25px)
+}
+
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1) skew(0deg, 0deg);
+  }
+  15% {
+    transform: translate(10px, 10px) rotate(1deg) scale(1.02) skew(2deg, 1deg);
+  }
+  25% {
+    transform: translate(10px, 15px) rotate(1.5deg) scale(1.02) skew(1deg, 2deg);
+  }
+  40% {
+    transform: translate(5px, 20px) rotate(0.5deg) scale(1.03) skew(-1deg, 1deg);
+  }
+  50% {
+    transform: translate(0, 20px) rotate(0deg) scale(1.05) skew(0deg, 0deg);
+  }
+  65% {
+    transform: translate(-5px, 15px) rotate(-0.5deg) scale(1.03) skew(-1deg, -1deg);
+  }
+  75% {
+    transform: translate(-10px, 15px) rotate(-1.5deg) scale(1.02) skew(1deg, -2deg);
+  }
+  85% {
+    transform: translate(-5px, 10px) rotate(-1deg) scale(1.01) skew(-2deg, 1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1) skew(0deg, 0deg);
+  }
+}
+
+.floatingImage {
+  animation: float 15s linear infinite;
+  will-change: transform;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  filter: contrast(1.1) brightness(1.1);
+}
