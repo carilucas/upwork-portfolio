@@ -1,6 +1,7 @@
 
 
-import { Hero, About, Projects, WorkBenefits } from "./ux/";
+import { Hero, About, Projects, WorkBenefits, WorkExperience } from "./ux/";
+import { Contact } from "@/components";
 
 export default function Home() {
   return (
@@ -9,6 +10,8 @@ export default function Home() {
       <About />
       <Projects />
       <WorkBenefits />
+      <WorkExperience />
+      <Contact />
     </main>
   );
 }
