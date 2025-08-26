@@ -3,10 +3,39 @@
 import { robotoSlab } from "@/config/fonts";
 import { workBenefits } from "@/constants";
 import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const WorkBenefits = () => {
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    const grid: [number, number] = [2, 3];
+    gsap.registerPlugin(ScrollTrigger);
+    const mediaQuery = gsap.matchMedia();
+    mediaQuery.add("(min-width: 1024px)", () => {
+    tl.from(
+      ".client-review",{
+        y: 300,
+        stagger: {
+          amount: 0.2,
+          from: "center",
+          axis: undefined,
+          grid: grid,
+        },
+        scrollTrigger: {
+          trigger: "#workBenefits",
+          start: "top center",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      }
+    );
+    });
+  }, []);
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="workBenefits">
       <h3 className={`head-text ${robotoSlab.className}`}>Why work with me?</h3>
 
       <div className="client-container">

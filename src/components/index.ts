@@ -3,3 +3,4 @@ export * from './Footer';
 export * from './Button';
 export * from './Robot';
 export * from './Contact';
+export * from './ProjectsPagination';

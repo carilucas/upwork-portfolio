@@ -40,7 +40,7 @@ export const Robot = (props:ThreeElements['group']) => {
     )
 }
 
-useGLTF.preload('/assets/models/robot.glb')
+useGLTF.preload('/models/robot.glb')
 
 
 

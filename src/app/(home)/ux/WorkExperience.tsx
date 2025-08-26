@@ -9,7 +9,7 @@ import { robotoSlab } from "@/config/fonts";
 
 export const WorkExperience = () => {
   return (
-    <section className="c-space my-20" id="work">
+    <section className="c-space my-20" >
       <div className="w-full text-white-600">
         <p className={`head-text ${robotoSlab.className}`}>My Work Experience</p>
 

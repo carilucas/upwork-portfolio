@@ -6,6 +6,8 @@ import gsap from "gsap";
 import { myProjects } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { robotoSlab } from "@/config/fonts";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const projectCount = myProjects.length;
 
@@ -25,6 +27,25 @@ export const Projects = () => {
   };
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const mediaQuery = gsap.matchMedia();
+    mediaQuery.add("(min-width: 1024px)", () => {
+    gsap.from(
+      ".work-wrappper",{
+        scale: 0,
+        scrollTrigger: {
+          trigger: "#work",
+          start: "top 90%",
+          end: "bottom bottom",
+          scrub: true,
+
+        },
+      }
+    );
+    });
+  }, [selectedProjectIndex]);
+
+  useGSAP(() => {
     gsap.fromTo(
       `.animatedText`,
       { opacity: 0 },
@@ -42,10 +63,10 @@ export const Projects = () => {
 
   const currentProject = myProjects[selectedProjectIndex];
   return (
-    <section className="c-space my-20">
-      <p className="head-text">My Selected Work</p>
+    <section className="c-space my-20" id="work">
+      <p className={`head-text ${robotoSlab.className}`}>My Selected Work</p>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full work-wrappper">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
           <div className="absolute top-0 right-0">
             <Image

@@ -3,9 +3,11 @@ import "./globals.css";
 import { Navbar, Footer } from "@/components";
 import { montserrat } from "@/config/fonts";
 
+
 export const metadata: Metadata = {
   title: "Carlos Mora - Portfolio",
-  description: "Web Developer specialized in React, Next.js and WordPress. Building fast, secure, SEO-optimized websites and web applications.",
+  description:
+    "Web Developer specialized in React, Next.js and WordPress. Building fast, secure, SEO-optimized websites and web applications.",
 };
 
 export default function RootLayout({

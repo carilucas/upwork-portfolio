@@ -242,3 +242,17 @@ body {
   backface-visibility: hidden;
   filter: contrast(1.1) brightness(1.1);
 }
+
+
+.animatedProject img{
+  animation: animated-project 8s ease-in-out infinite;
+}
+
+@keyframes animated-project {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}

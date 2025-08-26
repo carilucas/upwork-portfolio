@@ -1,10 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components";
 import { robotoSlab } from "@/config/fonts";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP);
 
 const Globe = dynamic(
   () => import("react-globe.gl").then((mod) => mod.default),
@@ -18,6 +23,7 @@ const Globe = dynamic(
   }
 );
 
+
 export const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
@@ -29,11 +35,32 @@ export const About = () => {
       setHasCopied(false);
     }, 2000);
   };
+
+  const about = useRef<HTMLDivElement>(null);
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const mediaQuery = gsap.matchMedia();
+    mediaQuery.add("(min-width: 1024px)", () => {
+    gsap.from(
+      ".animatedBox",{
+        y: 300,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".animatedBox",
+          start: "top 90%",
+          end: "50% bottom",
+          scrub: true,
+        },
+      }
+    );
+    });
+  }, []);
   return (
-    <section className="c-space my-20" id="about">
+    <section className="c-space my-20" id="about" ref={about}>
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
-          <div className="grid-container">
+          <div className="grid-container animatedBox">
             <Image
               src="/assets/grid1.webp"
               alt="grid-1"
@@ -56,7 +83,7 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-3">
+        <div className="col-span-1 xl:row-span-3 animatedBox">
           <div className="grid-container">
             <Image
               src="/assets/grid2.webp"
@@ -80,7 +107,7 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-4">
+        <div className="col-span-1 xl:row-span-4 animatedBox">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <Globe
