@@ -3,14 +3,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import { myProjects } from "@/constants";
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions";
+import { pageAnimation } from "@/view-transitions";
 
 export const ProjectsPagination = ({ slug }: { slug: string }) => {
   const slugProjectsArray = myProjects.map((project) => project.slug);
   const slugIndex = slugProjectsArray.indexOf(slug);
   const totalProjects = myProjects.length;
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(slugIndex);
-  const router = useRouter();
+  const router = useTransitionRouter();
 
   const handleNavigation = (direction: string) => {
     let newIndex;
@@ -27,10 +28,11 @@ export const ProjectsPagination = ({ slug }: { slug: string }) => {
           : selectedProjectIndex + 1;
     }
 
-
     setSelectedProjectIndex(newIndex);
 
-    router.push(`/projects/${myProjects[newIndex].slug}`);
+    router.push(`/projects/${myProjects[newIndex].slug}`, {
+      onTransitionReady: pageAnimation,
+    });
   };
   return (
     <div className="c-space mx-auto mb-10">
@@ -48,7 +50,10 @@ export const ProjectsPagination = ({ slug }: { slug: string }) => {
           <span>Previous</span>
         </button>
 
-        <button className="arrow-btn flex justify-center items-center gap-2" onClick={() => handleNavigation("next")}>
+        <button
+          className="arrow-btn flex justify-center items-center gap-2"
+          onClick={() => handleNavigation("next")}
+        >
           <span>Next</span>
           <Image
             src="/assets/right-arrow.png"
@@ -61,3 +66,5 @@ export const ProjectsPagination = ({ slug }: { slug: string }) => {
     </div>
   );
 };
+
+

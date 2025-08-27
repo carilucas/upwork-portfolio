@@ -21,6 +21,7 @@ export const Section3 = ({
   href,
 }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
+  console.log(isHovered);
   return (
     <section className="c-space w-full h-screen flex flex-col lg:flex-row items-center justify-center py-10 gap-20  mb-15">
       <div

@@ -243,16 +243,37 @@ body {
   filter: contrast(1.1) brightness(1.1);
 }
 
-
 .animatedProject img{
-  animation: animated-project 8s ease-in-out infinite;
+  animation: projectAnimation 13s ease-in-out;
 }
 
-@keyframes animated-project {
+@keyframes projectAnimation {
   0% {
-    top: 0;
+    top:0,
   }
   100% {
-    top: -100%;
+    top:-100%
   }
 }
+
+
+
+::view-transition-group(root){
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root){
+  isolation: isolate;
+  will-change: transform, scale, opacity;
+  z-index: 1;
+}
+
+::view-transition-new(root){
+  z-index: 2;
+  animation: none!important;
+}
+::view-transition-old(root){
+  z-index: 1;
+  animation: none!important;
+}
+

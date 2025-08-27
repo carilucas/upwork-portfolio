@@ -1,14 +1,27 @@
+
+"use client";
 import Image from "next/image";
 import { robotoSlab } from "@/config/fonts";
-
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 interface Props {
     img: string;
     title: string;
     subtitle: string;
     description: string;
+    slug: string;
 }
 
-export const HeroProject = ( { img, title, subtitle, description }: Props ) => {
+export const HeroProject = ( { img, title, subtitle, description,slug }: Props ) => {
+  useGSAP(() => {
+    gsap.from(".animatedMockup", {
+      opacity: 0,
+      scale: 0,
+      duration: 0.7,
+      ease: "power3.out",
+    });
+  });
+
   return (
     <section className="c-space min-h-screen w-full flex items-center justify-center" >
         <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center gap-20 max-w-7xl mx-auto">
@@ -18,7 +31,10 @@ export const HeroProject = ( { img, title, subtitle, description }: Props ) => {
                   alt={title}
                   width={2000}
                   height={2000}
-                  className="object-cover"
+                  className="object-cover animatedMockup"
+                  style={{
+                    viewTransitionName: `mockup-${slug}`,
+                  }}
                 />
             </div>
           <div className="flex-1 mb-5">

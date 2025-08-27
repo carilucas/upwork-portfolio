@@ -63,7 +63,7 @@ export const Hero = () => {
                 />
               </div>
               <div className="social-path absolute inset-0  top-67 left-0  h-[150px] w-[50px] z-1 flex justify-start items-center flex-col gap-5">
-                <a href="https://github.com/carlosmora" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/carilucas" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="/assets/github.svg"
                     alt="Hero"
@@ -72,9 +72,9 @@ export const Hero = () => {
                     className="max-w-[460px] max-h-[460px] object-cover opacity-50 hover:opacity-100 transition-all ease-in-out duration-700"
                   />
                 </a>
-                <a href="https://github.com/carlosmora" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/carlos-mora-dev/" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/github.svg"
+                    src="/assets/work/tech/linkedin.png"
                     alt="Hero"
                     width={50}
                     height={50}

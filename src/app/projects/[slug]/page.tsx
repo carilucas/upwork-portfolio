@@ -9,18 +9,22 @@ interface Props {
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
+
   if (!slug) redirect("/#work");
   const project = myProjects.find((project) => project.slug === slug);
   if (!project) redirect("/#work");
 
   const { mockup, title, projectDesc, mockup2, tags } = project;
   return (
+
+
     <>
       <HeroProject
         img={mockup}
         title={title}
         subtitle={projectDesc[0].subtitle}
         description={projectDesc[0].desc}
+        slug={slug}
       />
       <Seccion2
         subtitle={projectDesc[1].subtitle}
@@ -36,6 +40,7 @@ export default async function ProjectPage({ params }: Props) {
         href={project.href}
       />
       <ProjectsPagination slug={slug} />
-    </>
+      </>
+
   );
 }

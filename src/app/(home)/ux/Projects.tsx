@@ -8,10 +8,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { robotoSlab } from "@/config/fonts";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTransitionRouter } from "next-view-transitions";
+import { imageAnimation } from "@/view-transitions/imageAnimation";
 
 const projectCount = myProjects.length;
 
 export const Projects = () => {
+  const router = useTransitionRouter();
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
   const handleNavigation = (direction: string) => {
@@ -30,18 +33,15 @@ export const Projects = () => {
     gsap.registerPlugin(ScrollTrigger);
     const mediaQuery = gsap.matchMedia();
     mediaQuery.add("(min-width: 1024px)", () => {
-    gsap.from(
-      ".work-wrappper",{
+      gsap.from(".work-wrappper", {
         scale: 0,
         scrollTrigger: {
           trigger: "#work",
           start: "top 90%",
           end: "bottom bottom",
           scrub: true,
-
         },
-      }
-    );
+      });
     });
   }, [selectedProjectIndex]);
 
@@ -62,6 +62,12 @@ export const Projects = () => {
   }, [selectedProjectIndex]);
 
   const currentProject = myProjects[selectedProjectIndex];
+
+  const handleImageAnimation = () => {
+    router.push(`/projects/${currentProject.slug}`, {
+      onTransitionReady: ()=>imageAnimation(`mockup-${currentProject.slug}`),
+    });
+  };
   return (
     <section className="c-space my-20" id="work">
       <p className={`head-text ${robotoSlab.className}`}>My Selected Work</p>
@@ -103,7 +109,13 @@ export const Projects = () => {
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
                 <div key={index} className="tech-logo">
-                  <Image src={tag.path} alt={tag.name} width={60} height={60} title={tag.name}/>
+                  <Image
+                    src={tag.path}
+                    alt={tag.name}
+                    width={60}
+                    height={60}
+                    title={tag.name}
+                  />
                 </div>
               ))}
             </div>
@@ -123,9 +135,10 @@ export const Projects = () => {
                   className="w-3 h-3"
                 />
               </a>
-              <Link
+              <a
                 className="flex items-center gap-2 cursor-pointer text-white-600"
-                href={`/projects/${currentProject.slug}`}
+                // href={`/projects/${currentProject.slug}`}
+                onClick={handleImageAnimation}
               >
                 <p>More info</p>
                 <Image
@@ -135,7 +148,7 @@ export const Projects = () => {
                   height={60}
                   className="w-3 h-3"
                 />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -173,6 +186,9 @@ export const Projects = () => {
             width={800}
             height={800}
             className="w-full h-full object-cover animatedMockup"
+            style={{
+              viewTransitionName: `mockup-${currentProject.slug}`,
+            }}
           />
         </div>
       </div>
