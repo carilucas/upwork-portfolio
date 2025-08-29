@@ -180,16 +180,20 @@ export const Projects = () => {
         </div>
 
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+          <a 
+           onClick={handleImageAnimation}
+          >
           <Image
             src={currentProject.mockup || ""}
             alt="project"
             width={800}
             height={800}
-            className="w-full h-full object-cover animatedMockup"
+            className="w-full h-full object-cover animatedMockup cursor-pointer"
             style={{
               viewTransitionName: `mockup-${currentProject.slug}`,
             }}
           />
+          </a>
         </div>
       </div>
     </section>

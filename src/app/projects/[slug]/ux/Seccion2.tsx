@@ -36,8 +36,8 @@ export const Seccion2 = ({ subtitle, description, techStack }: Props) => {
               <Image
                 src={tech.path}
                 alt={tech.name}
-                width={50}
-                height={50}
+                width={35}
+                height={35}
               />
               <p className="text-black-200 text-center text-pretty font-semibold text-sm">
                 {tech.name}
