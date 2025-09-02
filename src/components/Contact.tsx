@@ -6,15 +6,22 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export const Contact = () => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm<ContactFormData>();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: ContactFormData) => {
     emailjs
       .send(
         "service_qubss5e",

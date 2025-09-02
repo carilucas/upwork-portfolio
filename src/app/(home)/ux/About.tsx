@@ -144,9 +144,11 @@ export const About = () => {
 
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            <img
-              src="assets/grid3.png"
+            <Image
+              src="/assets/grid3.png"
               alt="grid-3"
+              width={1920}
+              height={1080}
               className="w-full sm:h-[266px] h-fit object-contain"
             />
 
@@ -163,9 +165,11 @@ export const About = () => {
 
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
-            <img
-              src="assets/grid4.png"
+            <Image
+              src="/assets/grid4.png"
               alt="grid-4"
+              width={1920}
+              height={1080}
               className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
             />
 
@@ -176,9 +180,11 @@ export const About = () => {
                 Contact me
               </p>
               <div className="copy-container" onClick={handleCopy}>
-                <img
-                  src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
+                <Image
+                  src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}
                   alt="copy"
+                  width={20}
+                  height={20}
                 />
                 <p className="lg:text-md md:text-xl font-medium text-gray_gradient text-white">
                   carlos.mora.ram@gmail.com

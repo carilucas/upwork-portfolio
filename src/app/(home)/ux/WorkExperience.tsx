@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { Robot } from "@/components";
 import { workExperiences } from "@/constants";
 import { robotoSlab } from "@/config/fonts";
+import Image from "next/image";
 
 export const WorkExperience = () => {
   return (
@@ -41,7 +42,7 @@ export const WorkExperience = () => {
                 <div key={index} className="work-content_container group">
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className="work-content_logo">
-                      <img className="w-full h-full" src={item.icon} alt="" />
+                      <Image className="w-full h-full" src={item.icon} alt="" width={60} height={60} />
                     </div>
 
                     <div className="work-content_bar" />

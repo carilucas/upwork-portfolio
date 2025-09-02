@@ -42,14 +42,14 @@ export const Hero = () => {
         <div className="w-full h-full md:flex justify-between items-center gap-2 md:gap-5 flex-wrap px-5 lg:px-0">
           <div className="flex-1 mb-5">
             <p className="text-2xl lg heroText">
-              Hi, I'm <span className="font-bold">Carlos Mora</span>
+              Hi, I&apos;m <span className="font-bold">Carlos Mora</span>
             </p>
             <h1
               className={`text-2xl md:text-6xl text-gray_gradient mb-3 ${robotoSlab.className} heroText`}
             >
               Building new experiences
             </h1>
-            <p className="heroText">Let's create something amazing</p>
+            <p className="heroText">Let&apos;s create something amazing</p>
           </div>
           <div className="flex-1 profile-parent">
             <div className="md:max-w-[460px] max-w-[360px] mx-auto relative overflow-hidden path-container hover:scale-102 transition-all ease-in-out duration-700">

@@ -1,4 +1,5 @@
-import React from 'react'
+
+import Image from 'next/image'
 
 export const Footer = () => {
   return (
@@ -12,12 +13,12 @@ export const Footer = () => {
       <div className="flex gap-3">
         <div className="social-icon">
           <a href="https://github.com/carilucas" target="_blank" rel="noopener noreferrer" className="w-1/2 h-1/2">
-            <img src="/assets/github.svg" alt="github"/>
+            <Image src="/assets/github.svg" alt="github" width={24} height={24}/>
           </a>
         </div>
         <div className="social-icon">
           <a href="https://www.linkedin.com/in/carlos-mora-dev/" target="_blank" rel="noopener noreferrer" className="w-1/2 h-1/2">
-            <img src="/assets/work/tech/linkedin.png" alt="linkedin"/>
+            <Image src="/assets/work/tech/linkedin.png" alt="linkedin" width={24} height={24}/>
           </a>
         </div>
       </div>

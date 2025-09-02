@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { myProjects } from "@/constants";
 import Image from "next/image";
-import Link from "next/link";
 import { robotoSlab } from "@/config/fonts";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTransitionRouter } from "next-view-transitions";
