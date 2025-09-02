@@ -591,7 +591,7 @@ export const workExperiences = [
     id: 3,
     name: 'Pto99',
     pos: 'Web Developer',
-    duration: '2019 - 2020',
+    duration: '2015 - 2020',
     title: "Frontend development, digital campaigns, and corporate website maintenance.",
     icon: '/assets/work/logos/pto.png',
     animation: 'salute',
