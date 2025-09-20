@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import {  useRef } from "react";
 import { Button } from "@/components";
 import { robotoSlab } from "@/config/fonts";
 import dynamic from "next/dynamic";
@@ -25,16 +25,16 @@ const Globe = dynamic(
 
 
 export const About = () => {
-  const [hasCopied, setHasCopied] = useState(false);
+  // const [hasCopied, setHasCopied] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(" adrian@jsmastery.pro");
-    setHasCopied(true);
+  // const handleCopy = () => {
+  //   navigator.clipboard.writeText(" adrian@jsmastery.pro");
+  //   setHasCopied(true);
 
-    setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
-  };
+  //   setTimeout(() => {
+  //     setHasCopied(false);
+  //   }, 2000);
+  // };
 
   const about = useRef<HTMLDivElement>(null);
   useGSAP(() => {
@@ -137,7 +137,6 @@ export const About = () => {
                 I&apos;m based Ecuador, but I can work remotely from any
                 location.
               </p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
         </div>
@@ -177,19 +176,9 @@ export const About = () => {
               <p
                 className={`grid-headtext text-center ${robotoSlab.className}`}
               >
-                Contact me
+                Stay in touch
               </p>
-              <div className="copy-container" onClick={handleCopy}>
-                <Image
-                  src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}
-                  alt="copy"
-                  width={20}
-                  height={20}
-                />
-                <p className="lg:text-md md:text-xl font-medium text-gray_gradient text-white">
-                  carlos.mora.ram@gmail.com
-                </p>
-              </div>
+              <Button name="Contact Me" isBeam containerClass="w-full mt-10" href="https://www.upwork.com/freelancers/carlosmora"/>
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@ import { robotoSlab } from "@/config/fonts";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTransitionRouter } from "next-view-transitions";
 import { imageAnimation } from "@/view-transitions/imageAnimation";
+import { Button } from "@/components";
 
 const projectCount = myProjects.length;
 
@@ -195,6 +196,7 @@ export const Projects = () => {
           </a>
         </div>
       </div>
+      <Button name="Case Studies" isBeam containerClass="w-[300px] mt-10 mb-20" href="/projects/ifci-orchestras-web-platform"/>
     </section>
   );
 };

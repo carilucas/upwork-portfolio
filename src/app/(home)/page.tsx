@@ -1,7 +1,7 @@
 
 
 import { Hero, About, Projects, WorkBenefits, WorkExperience } from "./ux/";
-import { Contact } from "@/components";
+import { Button } from "@/components";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Projects />
       <WorkBenefits />
       <WorkExperience />
-      <Contact />
+      <Button name="Contact Me" isBeam containerClass="w-[300px] mt-10 mb-20" href="https://www.upwork.com/freelancers/carlosmora"/>
     </main>
   );
 }
