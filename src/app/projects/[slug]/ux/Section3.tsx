@@ -21,7 +21,7 @@ export const Section3 = ({
   href,
 }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
-  console.log(isHovered);
+
   return (
     <section className="c-space w-full h-screen flex flex-col lg:flex-row items-center justify-center py-10 gap-20  mb-15">
       <div
@@ -70,7 +70,9 @@ export const Section3 = ({
           </a>
           <Link
             className="flex-1 flex justify-center items-center gap-2 cursor-pointer text-white mb-4 border border-black-200 px-5 py-2 rounded-lg text-center hover:bg-black-200 transition-all duration-300"
-            href="../#contact"
+            href="https://www.upwork.com/freelancers/carlosmora"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <p>Contact me</p>
             <Image
