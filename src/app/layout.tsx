@@ -7,9 +7,15 @@ import { ViewTransitions } from "next-view-transitions";
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://carlos-mora-portfolio.vercel.app/"),
   title: "Carlos Mora - Portfolio",
   description:
     "Web Developer specialized in React, Next.js and WordPress. Building fast, secure, SEO-optimized websites and web applications.",
+    openGraph: {
+      title: "Carlos Mora - Portfolio",
+      description: "Web Developer specialized in React, Next.js and WordPress. Building fast, secure, SEO-optimized websites and web applications.",
+      images:[`/assets/09-perfil-b.webp`],
+    },
 };
 
 export default function RootLayout({
