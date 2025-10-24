@@ -24,7 +24,7 @@ export const Footer = () => {
       </div>
 
       <p className="text-white-500">© 2025 Carlos Mora. Rights reserved.</p>
-      <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7ad7fbf1ff854720489f406ff/193cc41d91e6d0bd486503094.js");</script>
+      <h1>Mailchimp</h1>
     </footer>
   )
 }
