@@ -74,13 +74,6 @@ export const Navbar = () => {
               className="w-6 h-6"
             />
           </button>
-          <Image
-            src="assets/03-logo-blanco.svg"
-            alt="Carlos Mora"
-            width={100}
-            height={100}
-            className="w-20 md:w-30 h-auto"
-          />
           <nav className="sm:flex hidden">
             <NavItems />
           </nav>
