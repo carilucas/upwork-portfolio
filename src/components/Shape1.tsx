@@ -23,7 +23,7 @@ export const Shape1 = () => {
 
   return (
     <div
-      className="flex justify-between items-center shape-1 relative -z-10"
+      className="flex justify-center md:justify-between items-center shape-1 relative -z-10"
       ref={shapeContainer}
     >
       <Image
