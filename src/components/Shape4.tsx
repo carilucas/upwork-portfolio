@@ -21,7 +21,7 @@ export const Shape4 = () => {
           start: "top 90%",
           end: "25% bottom",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       },
     );
