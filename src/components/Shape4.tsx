@@ -11,7 +11,7 @@ export const Shape4 = () => {
     gsap.fromTo(
       ".shape-4",
       {
-        y: 120,
+        y: 135,
       },
       {
         y: 0,
@@ -33,13 +33,14 @@ export const Shape4 = () => {
         alt="Carlos Mora"
         width="300"
         height="300"
+        className="w-90 h-auto"
       />
       <Image
         src="assets/12-shape-2.svg"
         alt="Carlos Mora"
         width="300"
         height="300"
-        className="hidden md:block"
+        className="hidden md:block w-90 h-auto"
       />
     </div>
   );

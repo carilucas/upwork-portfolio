@@ -38,7 +38,7 @@ export const ProjectsPagination = ({ slug }: { slug: string }) => {
     <div className="c-space mx-auto pb-10 bg-[var(--cyan-1)]">
       <div className="flex justify-between items-center w-full gap-5 max-w-md mx-auto pl-5 pr-3">
         <button
-          className="arrow-btn flex justify-center items-center gap-2"
+          className="btn flex justify-center items-center gap-2 bg-[var(--blue-1)] w-30"
           onClick={() => handleNavigation("previous")}
         >
           <Image
@@ -46,12 +46,13 @@ export const ProjectsPagination = ({ slug }: { slug: string }) => {
             alt="left arrow"
             width={60}
             height={60}
+            className="w-4 h-auto"
           />
           <span>Previous</span>
         </button>
 
         <button
-          className="arrow-btn flex justify-center items-center gap-2"
+          className="btn  flex justify-center items-center gap-2 bg-[var(--blue-1)] w-30"
           onClick={() => handleNavigation("next")}
         >
           <span>Next</span>
@@ -60,6 +61,7 @@ export const ProjectsPagination = ({ slug }: { slug: string }) => {
             alt="right arrow"
             width={60}
             height={60}
+            className="w-4 h-auto"
           />
         </button>
       </div>

@@ -45,7 +45,7 @@ export const Section3 = ({
       </div>
       <div className="flex-1 w-full glass p-6">
         <h2
-          className={`text-xl md:text-4xl mb-7 ${fredoka.className} text-[var(--black-4)]`}
+          className={`text-xl md:text-4xl mb-7 ${fredoka.className} text-[var(--blue-3)]`}
         >
           {subtitle1}
         </h2>
@@ -53,7 +53,7 @@ export const Section3 = ({
           {description1}
         </p>
         <h2
-          className={`text-xl md:text-4xl mb-7 ${fredoka.className} text-[var(--black-4)]`}
+          className={`text-xl md:text-4xl mb-7 ${fredoka.className} text-[var(--blue-3)]`}
         >
           {subtitle2}
         </h2>
@@ -71,7 +71,7 @@ export const Section3 = ({
               alt="arrow"
               width={60}
               height={60}
-              className="w-3 h-3"
+              className="w-4 h-4"
             />
           </a>
           <Link
@@ -86,7 +86,7 @@ export const Section3 = ({
               alt="arrow"
               width={60}
               height={60}
-              className="w-3 h-3"
+              className="w-4 h-4"
             />
           </Link>
         </div>
