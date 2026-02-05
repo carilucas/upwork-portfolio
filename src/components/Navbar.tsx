@@ -53,7 +53,7 @@ export const Navbar = () => {
             className="text-neutral-400 font-bold text-xl hover:text-white transition-colors nav-logo"
           >
             <Image
-              src={"/assets/03-logo-blanco.svg"}
+              src="/assets/03-logo-blanco.svg"
               alt="Carlos Mora"
               width={100}
               height={100}
