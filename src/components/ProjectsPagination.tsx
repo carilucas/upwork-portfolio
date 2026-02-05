@@ -35,7 +35,7 @@ export const ProjectsPagination = ({ slug }: { slug: string }) => {
     });
   };
   return (
-    <div className="c-space mx-auto mb-10">
+    <div className="c-space mx-auto pb-10 bg-[var(--cyan-1)]">
       <div className="flex justify-between items-center w-full gap-5 max-w-md mx-auto pl-5 pr-3">
         <button
           className="arrow-btn flex justify-center items-center gap-2"
@@ -66,5 +66,3 @@ export const ProjectsPagination = ({ slug }: { slug: string }) => {
     </div>
   );
 };
-
-

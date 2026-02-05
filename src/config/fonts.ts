@@ -1,10 +1,10 @@
-import { Roboto_Slab, Montserrat } from "next/font/google";
+import { Fredoka, Inter } from "next/font/google";
 
-export const robotoSlab = Roboto_Slab({
-  weight: "400",
+export const fredoka = Fredoka({
+  weight: ["400", "500"],
   subsets: ["latin"],
 });
 
-export const montserrat = Montserrat({
+export const inter = Inter({
   subsets: ["latin"],
 });

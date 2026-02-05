@@ -1,6 +1,6 @@
 "use client";
 
-import { robotoSlab } from "@/config/fonts";
+import { fredoka } from "@/config/fonts";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -23,7 +23,7 @@ export const Section3 = ({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="c-space w-full h-screen flex flex-col lg:flex-row items-center justify-center py-10 gap-20  mb-15">
+    <section className="c-space w-full h-screen flex flex-col lg:flex-row items-center justify-center py-10 gap-20 bg-[var(--cyan-1)]">
       <div
         className={`flex-1 w-full h-full overflow-hidden relative ${
           isHovered ? "animatedProject" : ""
@@ -43,25 +43,31 @@ export const Section3 = ({
           className="object-cover absolute top-0 left-0 w-full object-top"
         />
       </div>
-      <div className="flex-1 w-full">
-        <h2 className={`text-xl md:text-4xl mb-7 ${robotoSlab.className} `}>
+      <div className="flex-1 w-full glass p-6">
+        <h2
+          className={`text-xl md:text-4xl mb-7 ${fredoka.className} text-[var(--black-4)]`}
+        >
           {subtitle1}
         </h2>
-        <p className=" text-pretty mb-9">{description1}</p>
-        <h2 className={`text-xl md:text-4xl mb-7 ${robotoSlab.className} `}>
+        <p className=" text-pretty mb-9 text-[var(--black-4)]">
+          {description1}
+        </p>
+        <h2
+          className={`text-xl md:text-4xl mb-7 ${fredoka.className} text-[var(--black-4)]`}
+        >
           {subtitle2}
         </h2>
-        <p className=" text-pretty">{description2}</p>
+        <p className=" text-pretty text-[var(--black-4)]">{description2}</p>
         <div className="mt-8 flex justify-between items-center gap-5">
           <a
-            className="flex-1 flex justify-center items-center gap-2 cursor-pointer text-white mb-4 border border-black-200 px-5 py-2 rounded-lg text-center hover:bg-black-200 transition-all duration-300"
+            className="flex-1 flex justify-center items-center gap-2 cursor-pointer text-white mb-4 px-5 py-2 rounded-lg text-center bg-[var(--blue-1)] hover:bg-[var(--blue-2)] transition-all duration-300"
             href={href}
             target="_blank"
             rel="noreferrer"
           >
             <p>Live Site</p>
             <Image
-              src="/assets/arrow-up.png"
+              src="/assets/arrow-up-right.png"
               alt="arrow"
               width={60}
               height={60}
@@ -69,14 +75,14 @@ export const Section3 = ({
             />
           </a>
           <Link
-            className="flex-1 flex justify-center items-center gap-2 cursor-pointer text-white mb-4 border border-black-200 px-5 py-2 rounded-lg text-center hover:bg-black-200 transition-all duration-300"
+            className="flex-1 flex justify-center items-center gap-2 cursor-pointer text-white mb-4  px-5 py-2 rounded-lg text-center bg-[var(--blue-1)] hover:bg-[var(--blue-2)] transition-all duration-500"
             href="https://www.upwork.com/freelancers/carlosmora"
             target="_blank"
             rel="noopener noreferrer"
           >
             <p>Contact me</p>
             <Image
-              src="/assets/arrow-up.png"
+              src="/assets/arrow-up-right.png"
               alt="arrow"
               width={60}
               height={60}

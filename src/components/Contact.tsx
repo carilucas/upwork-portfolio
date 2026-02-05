@@ -1,11 +1,10 @@
 "use client";
 
-import { robotoSlab } from "@/config/fonts";
+import { fredoka } from "@/config/fonts";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
-
 
 interface ContactFormData {
   name: string;
@@ -25,34 +24,34 @@ export const Contact = () => {
     emailjs
       .send(
         "service_qubss5e",
-        "template_cjpt3aw", 
+        "template_cjpt3aw",
         {
-            name: data.name,
-            email: data.email,
-            message: data.message,
+          name: data.name,
+          email: data.email,
+          message: data.message,
         },
-         {
-            publicKey: "kiG1j8y0FLOEEYO-J",
-         }
+        {
+          publicKey: "kiG1j8y0FLOEEYO-J",
+        },
       )
       .then(
         () => {
-            Swal.fire({
-                icon: "success",
-                title: "Success...",
-                text: "Your message has been sent successfully!, I will get back to you as soon as possible.",
-              });
+          Swal.fire({
+            icon: "success",
+            title: "Success...",
+            text: "Your message has been sent successfully!, I will get back to you as soon as possible.",
+          });
         },
         (error) => {
-            console.log(error);
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Something went wrong!",
-              });
-        }
+          console.log(error);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+        },
       );
-      reset();
+    reset();
   };
 
   return (
@@ -67,7 +66,7 @@ export const Contact = () => {
         />
 
         <div className="contact-container">
-          <h3 className={`head-text ${robotoSlab.className} lg:mt-20`}>
+          <h3 className={`head-text ${fredoka.className} lg:mt-20`}>
             Contact me
           </h3>
           <p className="text-lg text-white-600 mt-3">
@@ -118,7 +117,11 @@ export const Contact = () => {
               )}
             </label>
 
-            <button className="field-btn cursor-pointer" type="submit" disabled={isSubmitting}>
+            <button
+              className="field-btn cursor-pointer"
+              type="submit"
+              disabled={isSubmitting}
+            >
               {isSubmitting ? "Sending..." : "Send Message"}
 
               <Image

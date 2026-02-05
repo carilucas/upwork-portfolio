@@ -4,3 +4,7 @@ export * from './Button';
 export * from './Robot';
 export * from './Contact';
 export * from './ProjectsPagination';
+export * from './Shape1';
+export * from './Shape2';
+export * from './Shape3';
+export * from './Shape4';

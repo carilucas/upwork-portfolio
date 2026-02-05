@@ -19,8 +19,6 @@ const NavItems = ({ onClick = () => {} }) => (
   </ul>
 );
 
-
-
 export const Navbar = () => {
   const navBar = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -29,29 +27,38 @@ export const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   useGSAP(() => {
-    const tl = gsap.timeline({scope: navBar.current});
+    const tl = gsap.timeline({ scope: navBar.current });
     tl.fromTo(
       ".nav-logo",
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 1, ease: "back.out" }
+      { opacity: 1, y: 0, duration: 1, ease: "back.out" },
     );
     tl.fromTo(
       ".nav-ul",
       { opacity: 0, y: -20 },
       { opacity: 1, y: 0, duration: 1, ease: "back.out" },
-      "-=0.5"
+      "-=0.3",
     );
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90" ref={navBar}>
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-[var(--black-4)]"
+      ref={navBar}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center py-5 mx-auto c-space">
+        <div className="flex justify-between items-center mx-auto py-4 px-4 md:px-0">
           <Link
             href="/"
             className="text-neutral-400 font-bold text-xl hover:text-white transition-colors nav-logo"
           >
-            Carlos Mora
+            <Image
+              src={"/assets/03-logo-blanco.svg"}
+              alt="Carlos Mora"
+              width={100}
+              height={100}
+              className="w-20 md:w-30 h-auto"
+            />
           </Link>
 
           <button

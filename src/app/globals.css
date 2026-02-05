@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #010103;
+  --background: #0A0D36;
   --foreground: #ededed;
 }
 
@@ -20,14 +20,6 @@
   --color-black-500: #3A3A49;
   --color-black-600: #1A1A1A;
 
-  /* Escala de blancos */
-
-  --color-white-800: #E4E4E6;
-  --color-white-700: #D6D9E9;
-  --color-white-600: #AFB0B6;
-  --color-white-500: #62646C;
-
-
   --bg-black-100: #010103;
   --bg-black-200: #0E0E10;
   --bg-black-300: #1C1C21;
@@ -35,10 +27,29 @@
   --bg-black-600: #1A1A1A;
 
   /* Escala de blancos */
+
+  --color-white-800: #E4E4E6;
+  --color-white-700: #D6D9E9;
+  --color-white-600: #AFB0B6;
+  --color-white-500: #62646C;
+
+  /* Escala de blancos bg */
   --bg-white-800: #E4E4E6;
   --bg-white-700: #D6D9E9;
   --bg-white-600: #AFB0B6;
   --bg-white-500: #62646C;
+
+  --blue-1: #2D73C3;
+  --blue-2: #325AB2;
+  --blue-3: #1F386E;
+
+  --cyan-1: #09E1F6;
+  --cyan-2: #09D9EC;
+  --cyan-3: #079BA8;
+
+  --black-4: #0A0D36;
+
+
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -48,7 +59,7 @@
   }
 } */
 body {
-  background: var(--background);
+  background: var(--foreground);
   color: var(--foreground);
 }
 
@@ -66,7 +77,7 @@ body {
 }
 
 .nav-li {
-  @apply text-neutral-400 hover:text-white hover:bg-black-500 w-full rounded-md py-2 px-5;
+  @apply text-[var(--cyan-2)] hover:text-white w-full rounded-md py-2 px-5 hover:bg-[var(--blue-1)] transition-all duration-500 ease-in-out;
 }
 
 .nav-li_a {
@@ -83,7 +94,7 @@ body {
 
 /* button component */
 .btn {
-  @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300 transition-all active:scale-95 text-white mx-auto;
+  @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md transition-all active:scale-95 text-white mx-auto;
 }
 
 .btn-ping {
@@ -101,7 +112,7 @@ body {
 
 /* about section */
 .grid-container {
-  @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+  @apply w-full h-full border rounded-[40px] sm:p-7 p-4 flex flex-col gap-1;
 }
 
 .grid-headtext {
@@ -109,7 +120,7 @@ body {
 }
 
 .grid-subtext {
-  @apply text-[#afb0b6] text-base text-pretty;
+  @apply text-white text-base text-pretty;
 }
 
 .copy-container {
@@ -122,7 +133,7 @@ body {
 }
 
 .tech-logo {
-  @apply w-10 h-10 rounded-md p-2 bg-neutral-100/10 backdrop-filter backdrop-blur-lg flex justify-center items-center;
+  @apply w-10 h-10 rounded-md p-2 bg-[var(--black-4)] backdrop-filter backdrop-blur-lg flex justify-center items-center;
 }
 
 /* clients section */
@@ -131,7 +142,7 @@ body {
 }
 
 .client-review {
-  @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300;
+  @apply rounded-lg md:p-10 p-5 col-span-1 bg-[var(--cyan-1)];
 }
 
 .client-content {
@@ -144,23 +155,23 @@ body {
 }
 
 .work-canvas {
-  @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
+  @apply col-span-1 rounded-lg;
 }
 
 .work-content {
-  @apply col-span-2 rounded-lg bg-black-200 border border-black-300;
+  @apply col-span-2 rounded-lg;
 }
 
 .work-content_container {
-  @apply grid grid-cols-[auto_1fr] items-start gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
+  @apply grid grid-cols-[auto_1fr] items-start gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-[var(--blue-1)] rounded-lg sm:px-5 px-2.5;
 }
 
 .work-content_logo {
-  @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
+  @apply rounded-3xl w-16 h-16 p-2 bg-[var(--blue-2)];
 }
 
 .work-content_bar {
-  @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
+  @apply flex-1 w-0.5 mt-4 h-full bg-[var(--black-4)] group-hover:bg-[var(--blue-2)] group-last:hidden;
 }
 
 /* contact section */
@@ -184,96 +195,127 @@ body {
   @apply w-2.5 h-2.5 object-contain invert brightness-0;
 }
 
+/* Cystom styles */
+.nav-logo,
+.nav-ul {
+  transform: translateY(-80);
+}
+
+.heroText,
+.social-path a,
+.profile-parent,
+.brand-promise {
+  opacity: 0
+}
+
+.shape-1 .shape {
+  transform: translateY(-150);
+}
+
+.marco {
+  display: none;
+}
+
+@media only screen and (min-width: 1015px) {
+  .marco {
+    display: block;
+  }
+
+  .marco-foto {
+    display: none;
+  }
+}
+
+.profile-parent {
+  position: relative;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+}
+
+.diamond-background-blue {
+  width: 100%;
+
+  background:
+    linear-gradient(to bottom right, var(--cyan-1) 0%, var(--blue-1) 50%) bottom right,
+    linear-gradient(to bottom left, var(--cyan-1) 0%, var(--blue-1) 50%) bottom left,
+    linear-gradient(to top left, var(--cyan-1) 0%, var(--blue-1) 50%) top left,
+    linear-gradient(to top right, var(--cyan-1) 0%, var(--blue-1) 50%) top right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.diamond-background-cyan {
+  width: 100%;
+
+  background:
+    linear-gradient(to bottom right, var(--blue-1) 0%, var(--cyan-1) 50%) bottom right,
+    linear-gradient(to bottom left, var(--blue-1) 0%, var(--cyan-1) 50%) bottom left,
+    linear-gradient(to top left, var(--blue-1) 0%, var(--cyan-1) 50%) top left,
+    linear-gradient(to top right, var(--blue-1) 0%, var(--cyan-1) 50%) top right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 /*  footer */
 .social-icon {
-  @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
+  @apply w-12 h-12 rounded-full flex justify-center items-center bg-[var(--blue-1)];
 }
-.path-container{
+
+.path-container {
   filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 1));
 
 }
 
 
-.path-profile{
+.path-profile {
   clip-path: path('M 40,0 L 315,0 A 30,30 0,0,1 342,27 L 342,40 A 23,23 0,0,0 368,52 A 30,30 0,0,1 400,78 L 400,372 A 65,65 0,0,1 340,420 L 101,420 A 45,45 0,0,1 60,373 L 60,280 A 25,25 0,0,0 40,255 L 28,255 A 25,25 0,0,1 0,230 L 0,40 A 40,40 0,0,1 40,0 Z');
 }
 
 
-.social-path{
+.social-path {
   clip-path: inset(0.5px round 0 25px)
 }
 
 
-@keyframes float {
-  0% {
-    transform: translate(0, 0) rotate(0deg) scale(1) skew(0deg, 0deg);
-  }
-  15% {
-    transform: translate(10px, 10px) rotate(1deg) scale(1.02) skew(2deg, 1deg);
-  }
-  25% {
-    transform: translate(10px, 15px) rotate(1.5deg) scale(1.02) skew(1deg, 2deg);
-  }
-  40% {
-    transform: translate(5px, 20px) rotate(0.5deg) scale(1.03) skew(-1deg, 1deg);
-  }
-  50% {
-    transform: translate(0, 20px) rotate(0deg) scale(1.05) skew(0deg, 0deg);
-  }
-  65% {
-    transform: translate(-5px, 15px) rotate(-0.5deg) scale(1.03) skew(-1deg, -1deg);
-  }
-  75% {
-    transform: translate(-10px, 15px) rotate(-1.5deg) scale(1.02) skew(1deg, -2deg);
-  }
-  85% {
-    transform: translate(-5px, 10px) rotate(-1deg) scale(1.01) skew(-2deg, 1deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(0deg) scale(1) skew(0deg, 0deg);
-  }
-}
-
-.floatingImage {
-  animation: float 15s linear infinite;
-  will-change: transform;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  filter: contrast(1.1) brightness(1.1);
-}
-
-.animatedProject img{
+.animatedProject img {
   animation: projectAnimation 13s ease-in-out;
 }
 
 @keyframes projectAnimation {
   0% {
-    top:0,
+    top: 0,
   }
+
   100% {
-    top:-100%
+    top: -100%
   }
 }
 
 
 
-::view-transition-group(root){
+::view-transition-group(root) {
   z-index: auto !important;
 }
 
-::view-transition-image-pair(root){
+::view-transition-image-pair(root) {
   isolation: isolate;
   will-change: transform, scale, opacity;
   z-index: 1;
 }
 
-::view-transition-new(root){
+::view-transition-new(root) {
   z-index: 2;
-  animation: none!important;
-}
-::view-transition-old(root){
-  z-index: 1;
-  animation: none!important;
+  animation: none !important;
 }
 
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none !important;
+}
