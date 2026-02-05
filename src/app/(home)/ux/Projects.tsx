@@ -33,13 +33,24 @@ export const Projects = () => {
     gsap.registerPlugin(ScrollTrigger);
     const mediaQuery = gsap.matchMedia();
     mediaQuery.add("(min-width: 1024px)", () => {
-      gsap.from(".work-wrappper", {
-        y: 1000,
+      gsap.from(".work-description", {
+        x: "-100%",
         scrollTrigger: {
-          trigger: "#work",
+          trigger: ".work-wrappper",
           start: "top 90%",
           end: "bottom bottom",
           scrub: true,
+          // markers: true,
+        },
+      });
+      gsap.from(".work-mockup", {
+        x: "100%",
+        scrollTrigger: {
+          trigger: ".work-wrappper",
+          start: "top 90%",
+          end: "bottom bottom",
+          scrub: true,
+          // markers: true,
         },
       });
     });
@@ -69,11 +80,8 @@ export const Projects = () => {
     });
   };
   return (
-    <section className=" bg-[var(--blue-1)] py-20 work-projects overflow-hidden">
-      <div
-        className="diamond-background-blue max-w-7xl mx-auto c-space"
-        id="work"
-      >
+    <section className=" bg-[var(--blue-1)] py-20 work-projects overflow-y-hidden">
+      <div className="diamond-background-blue max-w-7xl mx-auto " id="work">
         <Image
           src="assets/02-c.svg"
           width={300}
@@ -86,8 +94,8 @@ export const Projects = () => {
         </p>
 
         <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full work-wrappper">
-          <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 glass">
-            <div className="absolute top-0 right-0">
+          <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 glass work-description">
+            <div className="absolute top-0 right-0 -z-10">
               <Image
                 src={currentProject.spotlight}
                 alt="spotlight"
@@ -177,31 +185,35 @@ export const Projects = () => {
                   alt="left arrow"
                   width={60}
                   height={60}
-                />
+                  className="w-5 h-auto"
+                />{" "}
+                Previous
               </button>
 
               <button
                 className="arrow-btn"
                 onClick={() => handleNavigation("next")}
               >
+                Next
                 <Image
                   src="/assets/right-arrow.png"
                   alt="right arrow"
                   width={60}
                   height={60}
+                  className="w-5 h-auto"
                 />
               </button>
             </div>
           </div>
 
-          <div className="rounded-lg h-96 md:h-full glass">
+          <div className="rounded-lg h-90 md:h-full glass work-mockup">
             <a onClick={handleImageAnimation}>
               <Image
                 src={currentProject.mockup || ""}
                 alt="project"
                 width={800}
                 height={800}
-                className="w-full h-full object-cover animatedMockup cursor-pointer rounded-2xl"
+                className="w-full h-full max-w-160 object-cover animatedMockup cursor-pointer rounded-2xl"
                 style={{
                   viewTransitionName: `mockup-${currentProject.slug}`,
                 }}

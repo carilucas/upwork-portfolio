@@ -129,7 +129,7 @@ body {
 
 /* projects section  */
 .arrow-btn {
-  @apply w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full;
+  @apply flex justify-center items-center gap-5 w-[140px] h-10 p-4 cursor-pointer active:scale-95 transition-all bg-[var(--cyan-3)];
 }
 
 .tech-logo {

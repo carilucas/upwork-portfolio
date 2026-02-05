@@ -9,7 +9,7 @@ export const Shape2 = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".shape-2", {
+    gsap.to(".shape-2-vector", {
       y: 0,
       duration: 2,
       scrollTrigger: {
@@ -22,13 +22,13 @@ export const Shape2 = () => {
     });
   });
   return (
-    <div className="flex justify-center items-center shape-2 relative -z-10 translate-y-37">
+    <div className="flex justify-center items-center shape-2 relative -z-10 ">
       <Image
         src="assets/05-nube.svg"
         alt="Carlos Mora"
         width={300}
         height={300}
-        className="w-60 h-auto"
+        className="w-60 h-auto shape-2-vector translate-y-37"
       />
     </div>
   );

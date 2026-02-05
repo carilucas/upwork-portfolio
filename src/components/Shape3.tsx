@@ -10,7 +10,7 @@ export const Shape3 = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.fromTo(
-      ".shape-3",
+      ".shape-3-vector",
       {
         y: -135,
       },
@@ -34,7 +34,7 @@ export const Shape3 = () => {
         alt="Carlos Mora"
         width="300"
         height="300"
-        className="w-90 h-auto"
+        className="w-90 h-auto shape-3-vector"
       />
     </div>
   );
