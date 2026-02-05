@@ -17,11 +17,11 @@ export const Shape4 = () => {
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: ".shape-4",
-          start: "top 80%",
-          end: "180% bottom",
+          trigger: ".work-experience",
+          start: "top 90%",
+          end: "25% bottom",
           scrub: true,
-          // markers: true,
+          markers: true,
         },
       },
     );

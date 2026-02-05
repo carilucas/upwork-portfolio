@@ -15,7 +15,7 @@ export const Shape2 = () => {
       scrollTrigger: {
         trigger: ".shape-2",
         start: "top 80%",
-        end: "200% bottom",
+        end: "300% bottom",
         scrub: true,
         // markers: true,
       },

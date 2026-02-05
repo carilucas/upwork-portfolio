@@ -99,6 +99,7 @@ export const Hero = () => {
           width={400}
           height={400}
           className="max-w-[200px] object-cover absolute top-0 right-[-30px] rotate-325 hidden md:block"
+          priority
         />
       </div>
       <div className="flex justify-center items-center relative z-1 w-full max-w-7xl mx-auto mt-30">

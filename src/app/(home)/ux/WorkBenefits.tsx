@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export const WorkBenefits = () => {
   useGSAP(() => {
     const tl = gsap.timeline();
-    const grid: [number, number] = [2, 6];
+    const grid: [number, number] = [2, 3];
     gsap.registerPlugin(ScrollTrigger);
     const mediaQuery = gsap.matchMedia();
     mediaQuery.add("(min-width: 1024px)", () => {
@@ -22,7 +22,7 @@ export const WorkBenefits = () => {
         stagger: {
           amount: 0.2,
           from: "center",
-          axis: undefined,
+          axis: "x",
           grid: grid,
         },
         scrollTrigger: {
