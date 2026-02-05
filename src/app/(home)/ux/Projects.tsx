@@ -34,7 +34,7 @@ export const Projects = () => {
     const mediaQuery = gsap.matchMedia();
     mediaQuery.add("(min-width: 1024px)", () => {
       gsap.from(".work-wrappper", {
-        scale: 0,
+        y: 1000,
         scrollTrigger: {
           trigger: "#work",
           start: "top 90%",
@@ -69,7 +69,7 @@ export const Projects = () => {
     });
   };
   return (
-    <section className=" bg-[var(--blue-1)] py-20 work-projects">
+    <section className=" bg-[var(--blue-1)] py-20 work-projects overflow-hidden">
       <div
         className="diamond-background-blue max-w-7xl mx-auto c-space"
         id="work"
