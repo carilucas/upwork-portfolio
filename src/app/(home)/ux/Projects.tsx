@@ -34,7 +34,7 @@ export const Projects = () => {
     const mediaQuery = gsap.matchMedia();
     mediaQuery.add("(min-width: 1024px)", () => {
       gsap.from(".work-description", {
-        x: "-100%",
+        opacity: "0",
         scrollTrigger: {
           trigger: ".work-wrappper",
           start: "top 90%",
@@ -44,7 +44,7 @@ export const Projects = () => {
         },
       });
       gsap.from(".work-mockup", {
-        x: "100%",
+        opacity: "0",
         scrollTrigger: {
           trigger: ".work-wrappper",
           start: "top 90%",
@@ -80,13 +80,13 @@ export const Projects = () => {
     });
   };
   return (
-    <section className=" bg-[var(--blue-1)] py-20 work-projects overflow-y-hidden">
+    <section className=" bg-(--blue-1) py-20 work-projects overflow-y-hidden">
       <div className="diamond-background-blue max-w-7xl mx-auto " id="work">
         <Image
           src="assets/02-c.svg"
           width={300}
           height={300}
-          className="w-[200px] block m-auto mb-3.5"
+          className="w-50 block m-auto mb-3.5"
           alt="Carlos Mora"
         />
         <p className={`head-text ${fredoka.className} text-center`}>
