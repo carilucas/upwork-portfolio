@@ -284,7 +284,7 @@ export const myProjects = [
     slug: "bridgeway-legacy",
     mockup: "/assets/work/mockups/11-mockups-brid.webp",
     mockup2: "/assets/work/mockups/12-mockups-brid.webp",
-    logo: "/assets/work/logos/pto.png",
+    logo: "/assets/work/logos/brid.png",
     logoStyle: {
       backgroundColor: "#13202F",
       border: "0.2px solid #17293E",
