@@ -256,6 +256,70 @@ export const myProjects = [
     ],
   },
   {
+    title: "Bridgeway Legacy Partners - Corporate Website",
+    desc: "A professional and responsive corporate website developed for Bridgeway Legacy Partners, designed to communicate its long-term investment philosophy and people-first approach. The interface delivers clarity, trust, and strategic positioning for potential partners and business owners.",
+    projectDesc: [
+      {
+        id: 1,
+        subtitle: "Project Overview",
+        desc: "The Bridgeway Legacy Partners website was created to present the firm’s mission of building and growing exceptional businesses while preserving founders’ legacy. With a clean and corporate design, the platform emphasizes credibility and long-term vision, aligning with the expectations of entrepreneurs and investors.",
+      },
+      {
+        id: 2,
+        subtitle: "Audience Value & Positioning",
+        desc: "The site speaks directly to founders, business owners, and partners seeking sustainable growth and strategic support. By highlighting a differentiated strategy centered on long-term value, operational excellence, and a people-first culture, the platform reinforces Bridgeway’s positioning as a committed and trustworthy investment partner.",
+      },
+      {
+        id: 3,
+        subtitle: "Architecture & Content Model",
+        desc: "Structured around key sections such as Strategy, Industries, About, and Contact, the website delivers information in a concise and highly scannable format. The content model prioritizes clarity, allowing visitors to quickly understand the firm’s approach, targeted sectors—including Business Services, Healthcare, Manufacturing, and IT—and leadership background.",
+      },
+      {
+        id: 4,
+        subtitle: "Brand Messaging & Strategic Narrative",
+        desc: "Strong, value-driven messaging communicates Bridgeway’s focus on organic growth, strategic acquisitions, operational improvements, and talent development. The founder’s profile adds authenticity and leadership credibility, strengthening the brand narrative and fostering confidence among prospective partners.",
+      },
+    ],
+    href: "https://bridgewaylegacy.com/",
+    slug: "bridgeway-legacy",
+    mockup: "/assets/work/mockups/11-mockups-brid.webp",
+    mockup2: "/assets/work/mockups/12-mockups-brid.webp",
+    logo: "/assets/work/logos/pto.png",
+    logoStyle: {
+      backgroundColor: "#13202F",
+      border: "0.2px solid #17293E",
+      boxShadow: "0px 0px 60px 0px #2F6DB54D",
+    },
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "wordpress",
+        path: "/assets/work/tech/wp.png",
+      },
+      {
+        id: 2,
+        name: "Gsap",
+        path: "/assets/work/tech/gsap.png",
+      },
+      {
+        id: 3,
+        name: "Javascript",
+        path: "/assets/work/tech/js.png",
+      },
+      {
+        id: 4,
+        name: "PHP",
+        path: "/assets/work/tech/php.png",
+      },
+      {
+        id: 5,
+        name: "Adobe illustrator",
+        path: "/assets/work/tech/ai.png",
+      },
+    ],
+  },
+  {
     title: "Paso a paso - Baby healthcare documentary site",
     desc: "A documentary-style website aimed at guiding families in the care and upbringing of their children from birth through the first five years of life. It offers accessible resources and information, combining educational value with a friendly user experience.",
     projectDesc: [
@@ -398,7 +462,7 @@ export const myProjects = [
         desc: "By combining rigorous research with modern technology, Score CIMS supports timely, informed clinical decisions in the treatment of COVID-19 patients.",
       },
     ],
-    href: "https://scorecims.com",
+    href: "https://cims-2024.vercel.app/",
     slug: "score-cims-healthcare-web-app",
     mockup: "/assets/work/mockups/11-mockups-cims.webp",
     mockup2: "/assets/work/mockups/12-mockups-cim.webp",
